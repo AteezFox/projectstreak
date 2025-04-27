@@ -1,0 +1,125 @@
+.container {
+    background-color: #b87333 !important;
+    width: 280px;
+    height: 100vh !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: flex;
+    flex-direction: column;
+    border-right: 5px solid #8b0000;
+}
+
+.body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #f5e1c8;
+    color: black;
+    min-height: 100%;
+    overflow-y: auto;
+    border-top: 3px solid #8b0000;
+    border-bottom: 3px solid #8b0000;
+}
+
+.drawer {
+    height: 100vh !important;
+}
+
+.drawer .MuiDrawer-paper {
+    width: 280px;
+    height: 100vh !important;
+    background-color: #b87333 !important;
+    border-right: 5px solid #8b0000;
+}
+
+.floatingButton {
+    position: fixed !important;
+    left: 20px;
+    top: 80px;
+    z-index: 1000;
+    background-color: white !important;
+    color: black !important;
+    border-radius: 50% !important;
+    padding: 12px !important;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: #b87333 5px solid !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2) !important;
+}
+
+.floatingButton:hover {
+    background-color: #f5f5f5 !important;
+    transform: scale(1.05);
+    border: #8b0000 5px solid !important;
+}
+
+.categoryList {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+    padding: 0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.categoryItem {
+    padding: 12px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    background-color: #b87333;
+    color: white !important;
+    text-transform: capitalize;
+    border: 3px solid #8b0000;
+    margin: 0 !important;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.categoryItem:hover {
+    background-color: #8b0000;
+    transform: translateX(5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 3px solid #b87333;
+}
+
+.categoryItem.active {
+    background-color: #8b0000;
+    font-weight: bold;
+    transform: translateX(5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    border: 3px solid #b87333;
+}
+
+.categoryTitle {
+    color: #8b0000;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 16px 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+    border-bottom: 3px solid #8b0000;
+    margin-bottom: 16px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 260px;
+    }
+    
+    .floatingButton {
+        top: auto;
+        bottom: 20px;
+    }
+}

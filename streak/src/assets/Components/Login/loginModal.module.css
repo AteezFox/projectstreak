@@ -1,0 +1,123 @@
+#root {
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+}
+
+.modal {
+    background-color: #F5E1C8;
+    width: 90%;
+    height: auto;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 1.5rem;
+    border: #8B0000 solid 1px;
+    border-radius: 1rem;
+    transform: translateY(-50px);
+    opacity: 0;
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) translateY(-50px);
+}
+
+.modal-enter {
+    opacity: 1;
+    transform: translate(-50%, -50%) translateY(0);
+}
+
+.input {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1.5rem !important;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    background-color: #f9f9f9 !important;
+}
+
+.input:first-of-type {
+    margin-top: 2rem !important;
+}
+
+.modal h1 {
+    color: black;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.button {
+    color: black !important;
+    background-color: #B87333 !important;
+    border: #8B0000 solid 1px;
+    border-radius: 1rem;
+    padding: 0.5rem 1.5rem;
+    margin-top: 1rem;
+    width: 45%;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #a56c2d !important;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.error{
+    color: red !important;
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .modal {
+        width: 95%;
+        padding: 1.25rem;
+    }
+
+    .input {
+        margin-bottom: 1.25rem !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .modal {
+        padding: 1rem;
+        width: 90%;
+    }
+
+    .input {
+        margin-bottom: 1rem !important;
+    }
+
+    .button {
+        padding: 0.4rem 1rem;
+        width: 100%;
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 0.75rem;
+        margin-top: 1.25rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .modal {
+        padding: 0.75rem;
+    }
+
+    .modal h1 {
+        font-size: 1.5rem;
+    }
+
+    .input {
+        margin-bottom: 0.75rem !important;
+    }
+}

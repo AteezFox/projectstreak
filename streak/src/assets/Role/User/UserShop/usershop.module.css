@@ -1,0 +1,238 @@
+*{
+    opacity: 1;
+}
+
+.cardContainer {
+    display: grid;
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    background-color: transparent;
+}
+
+.card {
+    display: flex !important;
+    flex-direction: row !important;
+    background-color: white !important;
+    border: #8B0000 solid 1px  !important;
+    border-radius: 1rem !important;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+}
+
+.cardContent {
+    flex: 1;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    align-items: flex-start !important;
+    padding: 16px !important;
+    gap: 8px;
+}
+
+.cardTitle {
+    color: #333 !important;
+    font-size: 1.25rem !important;
+    font-weight: bold !important;
+    text-align: left !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.cardDescription {
+    color: #666 !important;
+    font-size: 0.9rem !important;
+    text-align: left !important;
+    margin: 0 !important;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.cardPrice {
+    color: #B87333 !important;
+    font-size: 1.1rem !important;
+    font-weight: bold !important;
+    margin-top: auto !important;
+}
+
+.cardImageContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 16px;
+}
+
+.cardImage {
+    width: 100%;
+    height: auto;
+    max-width: 200px;
+    object-fit: cover;
+    border-radius: 1rem;
+    border: #B87333 1px solid;
+}
+
+.addButton {
+    color: #2e7d32 !important;
+    font-size: 24px !important;
+    min-width: 40px !important;
+    width: 100% !important;
+    height: auto !important;
+    max-width: 40px;
+    padding: 8px !important;
+    border-radius: 50% !important;
+    margin-top: 8px;
+}
+
+.shopMobile{
+    color: #2e7d32 !important;
+    font-size: 24px !important;
+    min-width: 40px !important;
+    width: 100% !important;
+    height: auto !important;
+    max-width: 40px;
+    padding: 8px !important;
+    border-radius: 1rem !important;
+    margin-top: 8px;
+}
+
+.addButton:hover {
+    background-color: rgba(46, 125, 50, 0.1) !important;
+}
+
+.modalBox {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 600px;
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.modalImage {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 1rem;
+    border: 1px solid #B87333;
+}
+
+.modalTitle {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+}
+
+.modalDescription {
+    font-size: 1rem;
+    color: #666;
+    text-align: justify;
+    margin: 0;
+}
+
+.modalPrice {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #B87333;
+    margin-top: 8px;
+}
+
+.modalAddButton {
+    background-color: #2e7d32;
+    color: white;
+    font-size: 1.25rem;
+    padding: 10px 20px;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s ease;
+}
+
+.modalAddButton:hover {
+    background-color: #1b5e20;
+}
+
+/* Asztali nézet */
+@media (min-width: 1024px) {
+    .cardContainer {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 24px;
+        padding: 24px;
+    }
+
+    .card {
+        flex-direction: column !important;
+    }
+
+    .shopMobile{
+        display: none !important;
+    }
+}
+
+/* Mobil nézet */
+@media (max-width: 767px) {
+    .cardContainer {
+        grid-template-columns: 1fr;
+        gap: 2px;
+        padding: 0;
+    }
+
+    .card {
+        margin-bottom: 2px;
+        background-color: white !important;
+    }
+
+    .cardContent {
+        padding: 16px !important;
+    }
+
+    .cardImageContainer {
+        margin: 12px;
+    }
+
+    .cardImage {
+        width: 100px;
+        height: 100px;
+    }
+
+    .shopMobile {
+        margin-top: 10px;
+    }
+
+    .addButton{
+        display: none !important;
+    }
+
+    .cardDescription{
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
+}
+
+/* Animációk */
+@media (hover: hover) {
+    .card {
+        transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    }
+
+    .card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    }
+}

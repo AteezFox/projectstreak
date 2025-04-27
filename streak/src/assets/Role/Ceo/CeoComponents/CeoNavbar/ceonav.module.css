@@ -1,0 +1,168 @@
+#root{
+    font-family: 'Roboto', sans-serif;
+}
+
+.appBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #4E342E !important;
+    transition: top 0.3s ease-out, height 0.3s ease-out;
+}
+
+.appBar.hidden {
+    top: -100px;
+}
+
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menuButton {
+    cursor: pointer;
+    margin: 0 1pc;
+    max-width: 30px;
+    max-height: 30px;
+
+}
+
+.menuButton img {
+    filter: invert(1) brightness(1) grayscale(0%) !important;
+}
+
+.home{
+    margin: 0 1pc;
+    width: 100%;
+    height: auto;
+    max-width: 150px;
+}
+
+.navLinks {
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.navLinks .profile {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: auto;
+    margin-left: auto;
+    gap: 10px;
+    color: white;
+}
+
+.title{
+    display: flex;
+    width: 100%;
+    max-width: 140px;
+    height: auto;
+    filter: invert(1) brightness(1) grayscale(0%) !important;
+}
+
+.searchBar {
+    padding: 10px;
+    background-color: #f9f9f9;
+    position: fixed;
+    top: 64px;
+    width: 100%;
+    z-index: 1000;
+    color: black;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    border: 1px solid #8B0000;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 98.5%;
+}
+
+.searchBar input {
+    width: calc(100% - 20px);
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+    white-space: normal; /* Allow text to wrap */
+}
+
+.searchBar ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+}
+
+.searchBar ul li {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal; /* Allow text to wrap */
+    border-bottom: 1px solid #eee;
+}
+
+
+@media (max-width: 720px) {
+    .appBar {
+        position: fixed;
+        width: 100%;
+        background-color: #4E342E !important;
+        height: auto;
+    }
+
+    .searchBar {
+        top: 56px;
+        padding: 5px;
+    }
+
+    .searchBar ul li {
+        width: 100%;
+        font-size: 3cqi;
+        height: auto;
+        padding: 5px;
+        text-align: left;
+    }
+
+    .toolbar {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 5px;
+    }
+
+    .menuButton {
+        display: block;
+        margin: 5px auto;
+        max-width: 50px;
+    }
+
+    .menuButton img {
+        width: 100%;
+        height: auto;
+    }
+
+    .title {
+        display: none
+    }
+
+    .navLinks {
+        display: none;
+    }
+
+    .profile {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        width: auto;
+        margin-left: auto;
+        gap: 10px;
+        color: white;
+    }
+}

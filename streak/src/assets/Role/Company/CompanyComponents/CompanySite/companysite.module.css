@@ -1,0 +1,116 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #B87333;
+    color: black;
+    text-align: center;
+    opacity: 0.95;
+    padding: 1rem;
+    border: #8B0000 solid 1px;
+    border-radius: 1rem;
+}
+
+.body {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: #F5E1C8;
+    border: #8B0000 solid 5px;
+    border-radius: 10px;
+    color: black;
+    text-align: center;
+    padding: 30px;
+    height: auto;
+}
+
+
+
+h1, h2, h3, p {
+    opacity: 1;
+}
+
+p {
+    font-size: 1.2rem;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    margin-top: 2rem;
+}
+
+.desc, .desc2 {
+    margin-top: 3rem;
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.desc{
+    min-height: 500px;
+}
+
+.desc h2, .desc2 h2 {
+    font-size: 2.5rem;
+}
+
+.desc h3, .desc2 h3 {
+    font-size: 2rem;
+}
+
+ul{
+    text-align: left;
+}
+
+@media (max-width: 768px) {
+    .body {
+        padding: 20px;
+    }
+
+    .desc, .desc2, .support {
+        font-size: 1rem;
+    }
+
+    .desc h2, .desc2 h2 {
+        font-size: 1.8rem;
+    }
+
+    .desc h3, .desc2 h3 {
+        font-size: 1.3rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .start {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .button {
+        max-width: 100%;
+        padding: 10px;
+    }
+}

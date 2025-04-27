@@ -1,0 +1,74 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #B87333;
+    color: black;
+    text-align: center;
+    opacity: 0.95;
+    padding: 1rem;
+    border: #8B0000 solid 1px;
+    border-radius: 1rem;
+}
+
+.body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: #F5E1C8;
+    border: #8B0000 solid 5px;
+    border-radius: 10px;
+    color: black;
+    padding: 30px;
+    height: auto;
+    overflow: hidden;
+}
+
+.dialog {
+    border-radius: 1rem !important;
+    overflow: hidden;
+}
+
+.buttonNo{
+    background-color: #8B0000 !important;
+    color: white !important;
+    border-radius: 1rem !important;
+    padding: 0.5rem 1rem !important;
+    font-size: 1rem !important;
+}
+
+.buttonOk{
+    background-color: #4CAF50 !important;
+    color: white !important;
+    border-radius: 1rem !important;
+    padding: 0.5rem 1rem !important;
+    font-size: 1rem !important;
+    margin-left: 20rem !important;
+}
+
+.buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem !important;
+}
+
+.deleteButton {
+    background-color: #8b0000 !important;
+    color: white !important;
+    text-transform: none !important;
+    box-shadow: #730000 1px 1px 1px;
+}
+
+.deleteButton:hover {
+    background-color: #a80202 !important;
+}

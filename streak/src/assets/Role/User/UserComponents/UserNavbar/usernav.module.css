@@ -1,0 +1,151 @@
+#root {
+  font-family: 'Roboto', sans-serif;
+}
+
+.appBar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #4e342e !important;
+  transition: top 0.3s ease-out, height 0.3s ease-out;
+}
+
+.appBar.hidden {
+  top: -100px;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  display: flex;
+  width: 100%;
+  max-width: 140px;
+  margin: 0 auto;
+  filter: invert(1) brightness(1) grayscale(0%) !important;
+}
+
+.menuButton {
+  cursor: pointer;
+  margin: 0 1pc;
+  max-width: 30px;
+  max-height: 30px;
+}
+
+.menuButton img {
+  filter: invert(1) brightness(1) grayscale(0%) !important;
+}
+
+.home {
+  cursor: pointer;
+  margin: 0 1pc;
+  width: 100%;
+  height: auto;
+  max-width: 2.5em;
+  max-height: 5em;
+}
+
+.navLinks {
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.navLinks .profile {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: auto;
+  margin-left: auto;
+  gap: 10px;
+  color: white;
+}
+
+.addressMenu {
+  font-size: 1cap !important;
+  width: 100%;
+  max-width: 5em;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0 1pc !important;
+  margin-left: 4pc;
+}
+
+.searchBar {
+  padding: 10px;
+  background-color: #fff;
+  position: fixed;
+  top: 64px;
+  width: 100%;
+  z-index: 999;
+  color: black;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+}
+
+.iconGroup {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  gap: 8px;
+}
+
+@media (max-width: 720px) {
+  .appBar {
+    position: fixed;
+    width: 100%;
+    background-color: #4e342e !important;
+    height: auto;
+  }
+
+  .toolbar {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+  }
+
+  .menuButton {
+    display: block;
+    margin: 5px auto;
+    max-width: 50px;
+  }
+
+  .menuButton img {
+    width: 100%;
+    height: auto;
+  }
+
+  .title {
+    display: none;
+  }
+
+  .navLinks {
+    display: none;
+  }
+
+  .profile {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: auto;
+    margin-left: auto;
+    gap: 10px;
+    color: white;
+  }
+
+  .iconGroup {
+    gap: 4px;
+  }
+}

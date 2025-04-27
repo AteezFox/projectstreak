@@ -1,0 +1,83 @@
+#root {
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+}
+
+.floatingButton {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    z-index: 1000;
+    background-color: #4E342E;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.dialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #F5E1C8 !important;
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1001;
+    display: none;
+    border: #8B0000 1px solid !important;
+}
+
+.dialog.open {
+    display: block;
+}
+
+.inputField {
+    width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: #8B0000 solid 1px;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+}
+
+#message {
+    resize: none;
+    max-height: 4rem;
+    color: black;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.send{
+    background-color: white !important;
+    color: green !important;
+    border: #8B0000 solid 1px !important;
+    border-radius: 0.5rem !important;
+    padding: 0.5rem !important;
+}
+
+.close{
+    background-color: #B87333 !important;
+    color: black !important;
+    border: #8B0000 solid 1px !important;
+    border-radius: 0.5rem !important;
+    padding: 0.5rem !important;
+}

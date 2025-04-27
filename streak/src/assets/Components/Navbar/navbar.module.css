@@ -1,0 +1,110 @@
+#root{
+    font-family: 'Roboto', sans-serif;
+}
+
+.appBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #4E342E !important;
+    transition: top 0.3s ease-out, height 0.3s ease-out;
+}
+
+.appBar.hidden {
+    top: -100px;
+}
+
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menuButton {
+    cursor: pointer;
+    margin: 0 1pc;
+    width: 100%;
+    height: auto;
+    max-width: 80px;
+}
+
+.menuButton img {
+    width: 100%;
+    height: auto;
+    filter: invert(1) brightness(1) grayscale(0%) !important;
+}
+
+.title {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+    max-width: 150px;
+    filter: invert(1) brightness(1) grayscale(0%) !important;
+}
+
+.navLinks {
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.navLinks .login {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: auto;
+    margin-left: auto;
+    gap: 10px;
+}
+
+.menuWrapper {
+    position: absolute;
+    top: 0;
+    right: 10px;
+}
+
+@media (max-width: 720px) {
+    .appBar {
+        position: fixed;
+        width: 100%;
+        background-color: #4E342E !important;
+        height: 50px;
+    }
+
+    .toolbar {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 5px;
+    }
+
+    .menuButton {
+        display: block;
+        margin: 5px auto;
+        max-width: 50px;
+    }
+
+    .menuButton img {
+        width: 100%;
+        height: auto;
+    }
+
+    .title {
+        display: flex;
+    }
+
+    .navLinks {
+        display: none;
+    }
+
+    .menuWrapper {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+    }
+}
