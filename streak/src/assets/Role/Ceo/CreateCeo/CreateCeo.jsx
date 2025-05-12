@@ -58,23 +58,28 @@ export default function CreateCeo({ refreshCeoList }) {
       <Modal open={open} onClose={handleClose}>
         <Container className={styles.container}>
         <Box className={styles.body}>
-          <TextField
-            label="Vezetéknév"
-            value={lastName}
-            onChange={(e) => setLastName(e.target.value)}
-            error={emptyError}
-            helperText={emptyError ? "Kötelező mező" : ""}
-            required
-          />
-          <TextField
-            fullWidth
-            label="Keresztnév"
-            value={firstName}
-            onChange={(e) => setFirstName(e.target.value)}
-            required
-            error={emptyError}
-            helperText={emptyError ? "Kötelező mező" : ""}
-          />
+          <div className={styles.name}>
+            <TextField
+              label="Vezetéknév"
+              value={lastName}
+              onChange={(e) => setLastName(e.target.value)}
+              error={emptyError}
+              helperText={emptyError ? "Kötelező mező" : ""}
+              required
+              className={styles.input}
+            />
+            <TextField
+              fullWidth
+              label="Keresztnév"
+              value={firstName}
+              onChange={(e) => setFirstName(e.target.value)}
+              required
+              error={emptyError}
+              helperText={emptyError ? "Kötelező mező" : ""}
+              className={styles.input}
+            />
+          </div>
+
           <TextField
             label="Email"
             value={email}
@@ -83,6 +88,7 @@ export default function CreateCeo({ refreshCeoList }) {
             helperText={emailError ? "Hibás email" : ""}
             onChange={(e) => setEmail(e.target.value)}
             required
+            className={styles.input}
           />
           <TextField
             label="Jelszó"
@@ -92,6 +98,7 @@ export default function CreateCeo({ refreshCeoList }) {
             error={emptyError}
             helperText={emptyError ? "Kötelező mező" : ""}
             required
+            className={styles.input}
           />
           <TextField
             label="Telefon"
@@ -101,6 +108,7 @@ export default function CreateCeo({ refreshCeoList }) {
             helperText={telError ? "Hibás telefonszám" : ""}
             onChange={(e) => setPhone(e.target.value)}
             required
+            className={styles.input}
           />
           <TextField
             label="Állandó lakcím"
@@ -110,6 +118,7 @@ export default function CreateCeo({ refreshCeoList }) {
             error={emptyError}
             helperText={emptyError ? "Kötelező mező" : ""}
             required
+            className={styles.input}
           />
           {error && <p className={styles.error}>{error}</p>}
           <Button variant="contained" onClick={createCeo}>

@@ -90,8 +90,8 @@ export default function CreateProduct({ refreshProductList }) {
       </Button>
 
       <Modal open={open} onClose={handleClose}>
-        <Container className={styles.modalContainer}>
-          <Box className={styles.modalContent}>
+        <Container className={styles.container}>
+          <Box className={styles.body}>
             <Typography variant="h5" className={styles.modalTitle}>
               Új termék létrehozása
             </Typography>
@@ -105,6 +105,7 @@ export default function CreateProduct({ refreshProductList }) {
                 onChange={handleChange}
                 margin="normal"
                 required
+                className={styles.input}
               />
 
               <TextField
@@ -114,6 +115,7 @@ export default function CreateProduct({ refreshProductList }) {
                 value={formData.image}
                 onChange={handleChange}
                 margin="normal"
+                className={styles.input}
               />
 
               <TextField
@@ -126,9 +128,10 @@ export default function CreateProduct({ refreshProductList }) {
                 multiline
                 rows={3}
                 required
+                className={styles.input}
               />
 
-              <FormControl fullWidth margin="normal" required>
+              <FormControl fullWidth margin="normal" className={styles.input}>
                 <InputLabel>Kategória</InputLabel>
                 <Select
                   name="category"
@@ -156,9 +159,10 @@ export default function CreateProduct({ refreshProductList }) {
                   inputProps: { min: 0, step: "0.01" }
                 }}
                 required
+                className={styles.input}
               />
 
-              <div className={styles.formActions}>
+              <div className={styles.buttonContainer}>
                 <Button
                   variant="contained"
                   color="secondary"
